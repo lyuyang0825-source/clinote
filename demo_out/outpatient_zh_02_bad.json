@@ -1,0 +1,207 @@
+{
+  "source": "outpatient_zh_02_bad.txt",
+  "generated_at": "2026-11-24T12:39:29+08:00",
+  "engine": "clinote-rule-v1",
+  "chars": 116,
+  "summary": {
+    "blocker": 0,
+    "major": 3,
+    "minor": 2,
+    "total": 5,
+    "verdict": "建议修改后归档"
+  },
+  "coverage": {
+    "structured_fields": 5,
+    "with_span": 5
+  },
+  "soap": {
+    "S": [
+      {
+        "label": "主诉",
+        "section": "主诉",
+        "text": "腹痛。",
+        "span": [
+          4,
+          8
+        ],
+        "quote": "腹痛。"
+      },
+      {
+        "label": "现病史",
+        "section": "现病史",
+        "text": "肚子痛，昨天开始的，有点恶心。",
+        "span": [
+          13,
+          29
+        ],
+        "quote": "肚子痛，昨天开始的，有点恶心。"
+      }
+    ],
+    "O": [
+      {
+        "label": "体格检查",
+        "section": "查体",
+        "text": "T 37.2℃，BP 128/76mmHg。",
+        "span": [
+          33,
+          56
+        ],
+        "quote": "T 37.2℃，BP 128/76mmHg。"
+      }
+    ],
+    "A": [
+      {
+        "label": "诊断",
+        "section": "诊断",
+        "text": "1. 腹痛待查 2. 急性阑尾炎？",
+        "span": [
+          60,
+          78
+        ],
+        "quote": "1. 腹痛待查 2. 急性阑尾炎？"
+      }
+    ],
+    "P": [
+      {
+        "label": "处理",
+        "section": "处理",
+        "text": "1. 完善血常规、腹部超声。2. 头孢曲松 2g。3. 外科会诊。",
+        "span": [
+          82,
+          116
+        ],
+        "quote": "1. 完善血常规、腹部超声。2. 头孢曲松 2g。3. 外科会诊。"
+      }
+    ]
+  },
+  "facts": {
+    "vitals": [
+      {
+        "name": "体温",
+        "value": 37.2,
+        "secondary": null,
+        "unit": "℃",
+        "raw": "T 37.2℃",
+        "span": [
+          33,
+          40
+        ]
+      },
+      {
+        "name": "血压",
+        "value": 128.0,
+        "secondary": 76.0,
+        "unit": "mmHg",
+        "raw": "BP 128/76mmHg",
+        "span": [
+          41,
+          54
+        ]
+      }
+    ],
+    "medications": [
+      {
+        "name": "头孢曲松",
+        "dose": "2",
+        "unit": "g",
+        "frequency": null,
+        "duration": null,
+        "raw": "头孢曲松 2g",
+        "source": "plan",
+        "span": [
+          99,
+          106
+        ]
+      }
+    ],
+    "diagnoses": [
+      {
+        "index": 1,
+        "text": "腹痛待查",
+        "uncertain": true,
+        "span": [
+          63,
+          67
+        ]
+      },
+      {
+        "index": 2,
+        "text": "急性阑尾炎？",
+        "uncertain": true,
+        "span": [
+          71,
+          77
+        ]
+      }
+    ]
+  },
+  "findings": [
+    {
+      "rule_id": "R001",
+      "severity": "major",
+      "title": "缺少必填段落：既往史",
+      "message": "记录中未找到【既往史】段落或内容为空，病历完整性不达标。",
+      "suggestion": "补充【既往史】；若确实不适用，请写明“无”或“未记录”，不要留空。",
+      "evidence": "",
+      "span": null,
+      "severity_label": "重要"
+    },
+    {
+      "rule_id": "R004",
+      "severity": "major",
+      "title": "用药缺少频次：头孢曲松",
+      "message": "“头孢曲松 2g”未识别到给药频次。",
+      "suggestion": "补全 qd/bid/tid 等频次，或写明“按需”。",
+      "evidence": "头孢曲松 2g",
+      "span": [
+        99,
+        106
+      ],
+      "severity_label": "重要"
+    },
+    {
+      "rule_id": "R009",
+      "severity": "major",
+      "title": "主诉缺少持续时间",
+      "message": "主诉“腹痛。”未写明症状持续时间。",
+      "suggestion": "按“症状 + 持续时间”书写，例如“反复胸闷 3 天”。",
+      "evidence": "腹痛。",
+      "span": [
+        4,
+        7
+      ],
+      "severity_label": "重要"
+    },
+    {
+      "rule_id": "R004",
+      "severity": "minor",
+      "title": "用药缺少疗程：头孢曲松",
+      "message": "“头孢曲松 2g”未写明疗程或复诊时间点。",
+      "suggestion": "补全疗程（如 7 天）或“长期服用，X 周后复诊”。",
+      "evidence": "头孢曲松 2g",
+      "span": [
+        99,
+        106
+      ],
+      "severity_label": "提示"
+    },
+    {
+      "rule_id": "R008",
+      "severity": "minor",
+      "title": "未记录过敏史",
+      "message": "未找到【过敏史】段落；开具处方前应有过敏史记录。",
+      "suggestion": "补充“否认药物/食物过敏”或具体过敏原与反应类型。",
+      "evidence": "",
+      "span": null,
+      "severity_label": "提示"
+    }
+  ],
+  "review_checklist": [
+    "[major] 缺少必填段落：既往史 —— 补充【既往史】；若确实不适用，请写明“无”或“未记录”，不要留空。",
+    "[major] 用药缺少频次：头孢曲松 —— 补全 qd/bid/tid 等频次，或写明“按需”。",
+    "[major] 主诉缺少持续时间 —— 按“症状 + 持续时间”书写，例如“反复胸闷 3 天”。",
+    "[minor] 用药缺少疗程：头孢曲松 —— 补全疗程（如 7 天）或“长期服用，X 周后复诊”。",
+    "[minor] 未记录过敏史 —— 补充“否认药物/食物过敏”或具体过敏原与反应类型。"
+  ],
+  "disclaimer": "本工具为文书结构化与规则质控辅助，不是医疗器械，不提供诊断、处方或治疗建议；所有输出必须由具备资质的医生逐条核对原文后签字使用。"
+}

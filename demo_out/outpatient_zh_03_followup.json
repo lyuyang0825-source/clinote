@@ -1,0 +1,262 @@
+{
+  "source": "outpatient_zh_03_followup.txt",
+  "generated_at": "2026-11-24T12:39:29+08:00",
+  "engine": "clinote-rule-v1",
+  "chars": 317,
+  "summary": {
+    "blocker": 0,
+    "major": 1,
+    "minor": 1,
+    "total": 2,
+    "verdict": "建议修改后归档"
+  },
+  "coverage": {
+    "structured_fields": 8,
+    "with_span": 8
+  },
+  "soap": {
+    "S": [
+      {
+        "label": "主诉",
+        "section": "主诉",
+        "text": "反复头晕2周。",
+        "span": [
+          4,
+          12
+        ],
+        "quote": "反复头晕2周。"
+      },
+      {
+        "label": "现病史",
+        "section": "现病史",
+        "text": "患者2周前无明显诱因出现头晕，晨起明显，持续约10分钟，无恶心呕吐，无黑矇，无胸痛。未监测血压。",
+        "span": [
+          17,
+          66
+        ],
+        "quote": "患者2周前无明显诱因出现头晕，晨起明显，持续约10分钟，无恶心呕吐，无黑矇，无胸痛。未监测血压。"
+      },
+      {
+        "label": "既往史",
+        "section": "既往史",
+        "text": "高血压10年，长期服用氨氯地平5mg 每日一次；2型糖尿病5年，二甲双胍0.5g 每日两次。否认冠心病、脑卒中。",
+        "span": [
+          71,
+          128
+        ],
+        "quote": "高血压10年，长期服用氨氯地平5mg 每日一次；2型糖尿病5年，二甲双胍0.5g 每日两次。否认冠心病、脑卒中。"
+      },
+      {
+        "label": "过敏史",
+        "section": "过敏史",
+        "text": "青霉素过敏。",
+        "span": [
+          133,
+          140
+        ],
+        "quote": "青霉素过敏。"
+      }
+    ],
+    "O": [
+      {
+        "label": "体格检查",
+        "section": "查体",
+        "text": "T 36.4℃，P 88次/分，R 18次/分，BP 172/104mmHg。神清，双肺呼吸音清，心律齐，未闻及杂音。",
+        "span": [
+          144,
+          204
+        ],
+        "quote": "T 36.4℃，P 88次/分，R 18次/分，BP 172/104mmHg。神清，双肺呼吸音清，心律齐，未闻及杂音。"
+      },
+      {
+        "label": "辅助检查",
+        "section": "辅助检查",
+        "text": "糖化血红蛋白8.1%。空腹血糖9.2mmol/L。",
+        "span": [
+          210,
+          236
+        ],
+        "quote": "糖化血红蛋白8.1%。空腹血糖9.2mmol/L。"
+      }
+    ],
+    "A": [
+      {
+        "label": "诊断",
+        "section": "诊断",
+        "text": "1. 高血压3级（很高危） 2. 2型糖尿病",
+        "span": [
+          240,
+          263
+        ],
+        "quote": "1. 高血压3级（很高危） 2. 2型糖尿病"
+      }
+    ],
+    "P": [
+      {
+        "label": "处理",
+        "section": "处理",
+        "text": "1. 氨氯地平5mg 每日一次。2. 二甲双胍0.5g 每日两次。3. 2周后复诊，监测家庭血压。",
+        "span": [
+          267,
+          317
+        ],
+        "quote": "1. 氨氯地平5mg 每日一次。2. 二甲双胍0.5g 每日两次。3. 2周后复诊，监测家庭血压。"
+      }
+    ]
+  },
+  "facts": {
+    "vitals": [
+      {
+        "name": "体温",
+        "value": 36.4,
+        "secondary": null,
+        "unit": "℃",
+        "raw": "T 36.4℃",
+        "span": [
+          144,
+          151
+        ]
+      },
+      {
+        "name": "脉搏",
+        "value": 88.0,
+        "secondary": null,
+        "unit": "次/分",
+        "raw": "P 88次/分",
+        "span": [
+          152,
+          159
+        ]
+      },
+      {
+        "name": "呼吸",
+        "value": 18.0,
+        "secondary": null,
+        "unit": "次/分",
+        "raw": "R 18次/分",
+        "span": [
+          160,
+          167
+        ]
+      },
+      {
+        "name": "血压",
+        "value": 172.0,
+        "secondary": 104.0,
+        "unit": "mmHg",
+        "raw": "BP 172/104mmHg",
+        "span": [
+          168,
+          182
+        ]
+      }
+    ],
+    "medications": [
+      {
+        "name": "氨氯地平",
+        "dose": "5",
+        "unit": "mg",
+        "frequency": "每日一次",
+        "duration": null,
+        "raw": "氨氯地平5mg",
+        "source": "plan",
+        "span": [
+          270,
+          277
+        ]
+      },
+      {
+        "name": "二甲双胍",
+        "dose": "0.5",
+        "unit": "g",
+        "frequency": "每日两次",
+        "duration": "2周",
+        "raw": "二甲双胍0.5g",
+        "source": "plan",
+        "span": [
+          286,
+          294
+        ]
+      },
+      {
+        "name": "长期服用氨氯地平",
+        "dose": "5",
+        "unit": "mg",
+        "frequency": "每日一次",
+        "duration": "5年",
+        "raw": "长期服用氨氯地平5mg",
+        "source": "past",
+        "span": [
+          78,
+          89
+        ]
+      },
+      {
+        "name": "二甲双胍",
+        "dose": "0.5",
+        "unit": "g",
+        "frequency": "每日两次",
+        "duration": null,
+        "raw": "二甲双胍0.5g",
+        "source": "past",
+        "span": [
+          103,
+          111
+        ]
+      }
+    ],
+    "diagnoses": [
+      {
+        "index": 1,
+        "text": "高血压3级（很高危）",
+        "uncertain": false,
+        "span": [
+          243,
+          253
+        ]
+      },
+      {
+        "index": 2,
+        "text": "2型糖尿病",
+        "uncertain": false,
+        "span": [
+          257,
+          262
+        ]
+      }
+    ]
+  },
+  "findings": [
+    {
+      "rule_id": "R003",
+      "severity": "major",
+      "title": "血压高于目标值",
+      "message": "实测血压 172/104mmHg，高于一般门诊控制目标（<140/90mmHg）。",
+      "suggestion": "结合既往史与用药依从性评估；如为首次发现，建议不同日复测并记录。",
+      "evidence": "BP 172/104mmHg",
+      "span": [
+        168,
+        182
+      ],
+      "severity_label": "重要"
+    },
+    {
+      "rule_id": "R004",
+      "severity": "minor",
+      "title": "用药缺少疗程：氨氯地平",
+      "message": "“氨氯地平5mg”未写明疗程或复诊时间点。",
+      "suggestion": "补全疗程（如 7 天）或“长期服用，X 周后复诊”。",
+      "evidence": "氨氯地平5mg",
+      "span": [
+        82,
+        89
+      ],
+      "severity_label": "提示"
+    }
+  ],
+  "review_checklist": [
+    "[major] 血压高于目标值 —— 结合既往史与用药依从性评估；如为首次发现，建议不同日复测并记录。",
+    "[minor] 用药缺少疗程：氨氯地平 —— 补全疗程（如 7 天）或“长期服用，X 周后复诊”。"
+  ],
+  "disclaimer": "本工具为文书结构化与规则质控辅助，不是医疗器械，不提供诊断、处方或治疗建议；所有输出必须由具备资质的医生逐条核对原文后签字使用。"
+}
